@@ -29,7 +29,6 @@ variable "master_ipv4_cidr_block" {
   description = "Secondary range name for services"
   type        = string
 }
-# Legacy variables for backward compatibility
 
 
 
@@ -49,31 +48,15 @@ variable "working_node_count" {
 }
 
 
-# Autoscaling node pool configuration (scales from 0, more powerful)
-/*variable "max_autoscale_nodes"{
-  description = "Maximum number of nodes for the autoscaling pool"
-  type        = number
-  default     = 0
-}*/
 
 
 variable "service_account" {
   description = "Custom service account for the node pool"
   type        = string
 }
-/*variable "database_machine_type" {
-  description = "Machine type for database nodes"
-  type        = string
-  default     = "e2-medium"
-}*/
 
 variable "working_machine_type" {
   description = "Machine type for working nodes (cost-effective)"
   type        = string
 }
 
-/*variable "autoscale_machine_type"{
-  description = "Machine type for autoscaling nodes"
-  type        = string
-  default     = ""
-}*/

@@ -4,7 +4,7 @@ metadata:
   name: devopsawy-cert
 spec:
   domains:
-    - devopsawy.site
+    - www.devopsawy.site
 
 ---
 

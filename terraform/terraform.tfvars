@@ -10,19 +10,6 @@ subnet_cidr = "10.0.0.0/24"
 pods_range_cidr = "10.1.0.0/16"
 services_range_cidr = "10.2.0.0/20"
 cluster_name = "nawy-cluster"
-
-# Legacy variables (kept for compatibility)
-
-
-# Mixed machine type autoscaling configuration
-enable_preemptible = true
-
-# working nodes (always running) - Cost-effective smaller machines
-working_node_count = 1            # Start with 4 small nodes
-
-#database_machine_type = "e2-highmem-2"
-# Autoscale nodes (scale from 0) - More powerful machines for peak load
-
-#max_autoscale_nodes = 3              # Can scale up to 3 additional nodes (was 2)
-#autoscale_machine_type = "e2-medium"  # Keep consistent machine type
+enable_preemptible = trues
+working_node_count = 1            
 working_machine_type = "e2-standard-4"

@@ -26,6 +26,6 @@ module "gke" {
   # Mixed machine type autoscaling configuration
   enable_preemptible = var.enable_preemptible
   working_machine_type = var.working_machine_type
-  # database_machine_type = var.database_machine_type
+ 
 
 }

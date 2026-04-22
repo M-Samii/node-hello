@@ -1,6 +1,6 @@
 resource "google_container_cluster" "nawy" {
   name     = var.cluster_name
-  location = var.zone  # Use zone instead of region for zonal cluster
+  location = var.zone  
   project  = var.project_id
   deletion_protection = false
   network    = var.vpc_network
@@ -21,7 +21,7 @@ resource "google_container_cluster" "nawy" {
   
 }
 
-# working node pool with smaller, cost-effective machines (always running)
+
 
 resource "google_container_node_pool" "working_nodes" {
   name = "${var.cluster_name}-working-pool"
