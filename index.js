@@ -1,12 +1,23 @@
-const http = require('http');
-const port = process.env.PORT || 3000;
+'use strict';
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  const msg = 'Hello Node!\n'
-  res.end(msg);
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Hello World!',
+    version: '1.0.0',
+    timestamp: new Date().toISOString(),
+  });
 });
 
-server.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}/`);
+app.get('/health', (req, res) => {
+  res.json({ status: 'healthy' });
 });
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+module.exports = app;
