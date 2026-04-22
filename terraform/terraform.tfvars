@@ -18,11 +18,11 @@ cluster_name = "nawy-cluster"
 enable_preemptible = true
 
 # working nodes (always running) - Cost-effective smaller machines
-working_node_count = 1                # Start with 1 small node
+working_node_count = 1            # Start with 4 small nodes
 
 #database_machine_type = "e2-highmem-2"
 # Autoscale nodes (scale from 0) - More powerful machines for peak load
 
 #max_autoscale_nodes = 3              # Can scale up to 3 additional nodes (was 2)
 #autoscale_machine_type = "e2-medium"  # Keep consistent machine type
-working_machine_type = "e2-standard-2"
+working_machine_type = "e2-standard-4"
