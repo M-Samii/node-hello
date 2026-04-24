@@ -4,3 +4,4 @@
 *.tfstate
 *.tfstate.*
 node_modules/
+new relic/licensekey.txt

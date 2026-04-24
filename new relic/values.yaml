@@ -74,7 +74,7 @@ global:
   cluster: Nawycluster
 
   # -- The license key for your New Relic Account. This will be preferred configuration option if both `licenseKey` and `customSecret` are specified.
-  licenseKey: 5a16a4357c7f2b5814d1c4bd79455c49775fNRAL
+  licenseKey: *********
   # -- The license key for your New Relic Account. This will be preferred configuration option if both `insightsKey` and `customSecret` are specified.
   insightsKey: ""
   # -- Name of the Secret object where the license key is stored

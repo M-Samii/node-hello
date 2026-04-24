@@ -17,7 +17,7 @@ jobs:
         id: meta
         run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
 
-      # ✅ LINTING PART
+      #  LINTING PART
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

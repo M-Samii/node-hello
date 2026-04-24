@@ -232,7 +232,7 @@ helm install argocd argo/argo-cd -n argocd
 ### 📦 Deploy Your Application via ArgoCD
 
 ```bash
-kubectl apply -f application.yaml
+kubectl apply -f argocd/application.yaml
 ```
 
 > Ensure your `application.yaml` points to the correct repo, path, and destination cluster/namespace.
@@ -258,38 +258,13 @@ Add your New Relic license key to:
 
 * **GitHub Secrets** (for CI/CD)
 
-  * github tokrn for argo
+  * github token for argo
   * Dockerhub token
 
 ---
 
-#### 2. Install New Relic Agent (Example: Node.js App)
 
-```bash
-npm install newrelic
-```
-
-Create a `newrelic.js` file:
-
-```js
-exports.config = {
-  app_name: ['my-app'],
-  license_key: process.env.NEW_RELIC_LICENSE_KEY,
-  logging: {
-    level: 'info'
-  }
-}
-```
-
-Then require it at the top of your app:
-
-```js
-require('newrelic');
-```
-
----
-
-#### 3. Kubernetes / GKE Integration
+#### 2. Kubernetes / GKE Integration
 
 You can deploy New Relic using Helm:
 
@@ -323,43 +298,6 @@ helm upgrade --install newrelic-bundle newrelic/nri-bundle \
 
 This approach allows better configuration management and version control compared to inline `--set` flags.
 
-##### 🔹 Quick Install (Inline)
 
-````bash
-helm install newrelic-bundle newrelic/nri-bundle \
-  --set global.licenseKey=$NEW_RELIC_LICENSE_KEY \
-  --set global.cluster=your-cluster-name
-```bash
-helm repo add newrelic https://helm-charts.newrelic.com
-helm repo update
-
-helm install newrelic-bundle newrelic/nri-bundle \
-  --set global.licenseKey=$NEW_RELIC_LICENSE_KEY \
-  --set global.cluster=your-cluster-name
-````
-
----
-
-#### 4. Terraform Integration (Optional)
-
-You can manage New Relic resources using Terraform:
-
-```hcl
-provider "newrelic" {
-  account_id = var.newrelic_account_id
-  api_key    = var.newrelic_api_key
-  region     = "US"
-}
-```
-
-Example: Create alert policy
-
-```hcl
-resource "newrelic_alert_policy" "example" {
-  name = "High CPU Usage"
-}
-```
-
----
 
 
