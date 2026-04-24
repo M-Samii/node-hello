@@ -1,3 +1,21 @@
+# 📖 Project Overview
+
+This repository contains a Node.js application (`index.js`) and the necessary infrastructure as code to deploy it on Google Kubernetes Engine (GKE). The infrastructure is managed using Terraform, and the application is containerized using Docker. The project also includes Kubernetes manifests for deployment and a CI/CD pipeline for automation, using GitHub Actions for Continuous Integration and ArgoCD for Continuous Deployment.
+
+## 📑 Index
+
+- [Project Overview](#-project-overview)
+- [Terraform Infrastructure](#-terraform-infrastructure--gitops-pipeline-for-node-app)
+- [Terraform Module Structure](#️-terraform-module-structure)
+- [Terraform Modules](#-terraform-modules)
+- [How to Use](#how-to-use)
+- [CI Pipeline (GitHub Actions)](#️-ci-pipeline-github-actions)
+- [CI Workflow](#-ci-workflow)
+- [ArgoCD](#-argocd)
+- [New Relic](#-new-relic)
+
+---
+
 #  Terraform Infrastructure & gitops  Pipeline for node app
 
 This repository provides a **modular Terraform setup** for provisioning infrastructure along with a **CI pipeline** for automation, validation, and deployment.
@@ -81,9 +99,8 @@ This repository uses a **Docker-based CI pipeline** that builds, scans (lint), p
 ### 📌 Pipeline Features
 
 * Checkout source code
-* Generate short commit SHA for tagging
 * Run **ESLint** for code quality
-* Build Docker image using Buildx
+* Generate short commit SHA for tagging* Build Docker image using Buildx
 * Push image to Docker Hub (latest + versioned tag)
 * Update ArgoCD repository with new image tag (GitOps flow)
 
@@ -345,22 +362,4 @@ resource "newrelic_alert_policy" "example" {
 
 ---
 
-### 📈 What You Get
-
-* Application performance monitoring (APM)
-* Infrastructure metrics (CPU, memory, network)
-* Logs and distributed tracing
-*
-
----
-
-## 💡 Summary
-
-This repository demonstrates:
-
-* Clean Terraform module design
-* Scalable infrastructure setup
-* Automated CI pipeline for reliability and consistency
-
----
 
