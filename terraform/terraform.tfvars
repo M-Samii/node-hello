@@ -10,6 +10,6 @@ subnet_cidr = "10.0.0.0/24"
 pods_range_cidr = "10.1.0.0/16"
 services_range_cidr = "10.2.0.0/20"
 cluster_name = "nawy-cluster"
-enable_preemptible = trues
+enable_preemptible = true
 working_node_count = 1            
 working_machine_type = "e2-standard-4"
