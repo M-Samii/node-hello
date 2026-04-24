@@ -216,6 +216,9 @@ This pipeline implements a **full CI + GitOps workflow**:
  GitOps with ArgoCD (Required Before New Relic)
 ```
 
+<img width="931" height="512" alt="dockerhub" src="https://github.com/user-attachments/assets/e961a976-88bd-4992-8f6b-d89aa2cc4667" />
+
+
 Deploy **ArgoCD** to manage applications in a GitOps workflow before installing New Relic.
 
 ### ⚙️ Install ArgoCD via Helm
@@ -238,6 +241,11 @@ kubectl apply -f argocd/application.yaml
 > Ensure your `application.yaml` points to the correct repo, path, and destination cluster/namespace.
 
 ---
+
+<img width="1908" height="879" alt="Argocd" src="https://github.com/user-attachments/assets/6510eda0-4a4a-4b77-b298-4eae50a2b923" />
+
+<img width="866" height="182" alt="run secure" src="https://github.com/user-attachments/assets/ef97f0e6-b5d1-426a-8670-042e78ac9a5b" />
+
 
 ## 📊 Monitoring with New Relic
 
