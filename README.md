@@ -299,5 +299,6 @@ helm upgrade --install newrelic-bundle newrelic/nri-bundle \
 This approach allows better configuration management and version control compared to inline `--set` flags.
 
 
+<img width="1919" height="889" alt="newrelic" src="https://github.com/user-attachments/assets/333db55d-63a3-40a3-8d0f-9d6346727fad" />
 
 
